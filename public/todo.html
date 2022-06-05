@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Todolist">
+  <meta name="keywords" content="Studbud, todolist, productivity">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>todolist</title>
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <!--Adobe Fonts-->
+  <link rel="stylesheet" href="https://use.typekit.net/std2ild.css">
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <!--Stylesheet-->
+  <link href="/todo/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload="checkTasks()">
+    <div class="topnav" id="myTopnav">
+    <a class="brand" href="#"><img src="/images/logo.png" alt="logo"></a>
+    <a href="index.html">Dashboard</a>
+    <a href="stopwatch.html">Stopwatch</a>
+    <a href="pomodoro.html">Pomodoro</a>
+    <a href="#"class="active">Todo</a>
+    <a href="kanban.html">Kanban</a>
+    <a href="music.html">Music Player</a>
+    <a href="dictionary.html">Dictionary</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <h1>To do list</h1>
+
+  <center><button type="button" onclick="myFunction()">Add New Task</button><input type="button" id="button" value="Save Tasks"
+      onclick="saveTasks()" /></center>
+  <br><br>
+  <table style="margin-left: auto; margin-right: auto;">
+    <tr>
+      <th>Task Name</th>
+      <th>Time to Complete</th>
+      <th>Due Date</th>
+      <th>Priority</th>
+      <th>Finished</th>
+    </tr>
+  </table>
+  <br>
+  <table id="taskTable" contenteditable="true" style="margin-right: auto; margin-left: auto;">
+    <tr>
+      <td>Sample Task</td>
+      <td>00 Minutes</td>
+      <td>DD/MM/YY</td>
+      <td><select name="priority">
+          <option>Low</option>
+          <option>Medium</option>
+          <option>High</option>
+        </select>
+      </td>
+      <td><input type="checkbox" name="Status"></td>
+    </tr>
+  </table>
+  <br>
+  <div id="update"></div>
+  <script src="todo/script.js"></script>
+
+</body>
+
+</html>

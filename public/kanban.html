@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Kanban">
+  <meta name="keywords" content="Task Management, Studbud, Kanban">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kanban Board</title>
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+  <!--Adobe Fonts-->
+  <link rel="stylesheet" href="https://use.typekit.net/std2ild.css">
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="/kanban/style.css" />
+</head>
+
+<body>
+  <div class="topnav" id="myTopnav">
+    <a class="brand" href="#"><img src="images/logo.png" alt="logo"></a>
+    <a href="index.html">Dashboard</a>
+    <a href="stopwatch.html">Stopwatch</a>
+    <a href="pomodoro.html">Pomodoro</a>
+    <a href="todo.html">Todo</a>
+    <a href="#" class="active">Kanban</a>
+    <a href="music.html">Music Player</a>
+    <a href="dictionary.html">Dictionary</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+<br></br>
+  <!-- modal -->
+  <div class="modal" id="todo_form">
+    <div class="header">
+      <div class="title">Add Task</div>
+      <button class="btn close-modal">&times;</button>
+    </div>
+    <div class="body">
+      <input type="text" id="todo_input" />
+      <input type="submit" value="Add Task" id="todo_submit" />
+    </div>
+  </div>
+  <!-- todo -->
+  <div class="todo-container" id="center">
+    <div class="status" id="no_status">
+      <h1>Uncategorised</h1>
+      <button id="add_btn" data-target-modal="#todo_form">+ Add Task</button>
+      <div class="todo" draggable="true">
+        Buy a Pizza
+        <span class="close">&times;</span>
+      </div>
+    </div>
+    <div class="status">
+      <h1>New Task</h1>
+    </div>
+    <div class="status">
+      <h1>Progress</h1>
+    </div>
+    <div class="status">
+      <h1>Finished</h1>
+    </div>
+  </div>
+
+  <div id="overlay"></div>
+
+  <script src="/kanban/script.js"></script>
+</body>
+
+</html>

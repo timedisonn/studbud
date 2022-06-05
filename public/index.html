@@ -1,48 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <form id="taskform">
-      <label for="task">Task:</label>
-      <input type="text" name="task" id="taskInput">
 
-      <br>
-    <!-- Date input -->
-      <label for="dueDate">Due Date: </label>
-      <input type="date" name="dueDate" id="dueDateInput">
-      <br>
-    <!-- Time input -->
-    <label for="completionTime">Completion Time: </label>
-      <input type="time" name="completionTime" id="completionTimeInput">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Dashboard</title>
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+  <!--Adobe Fonts-->
+  <link rel="stylesheet" href="https://use.typekit.net/std2ild.css">
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <!--Stylesheet-->
+  <link href="/dashboard/style.css" rel="stylesheet" type="text/css" />
+</head>
 
-      <br>
+<body>
+  <div class="topnav" id="myTopnav">
+    <a class="brand" href="#"><img src="images/logo.png" alt="logo"></a>
+  </div>
+  <br></br>
+  <div class="banner-text">
+    <div data-tilt data-tilt-full-page-listening>
+      <h2>Welcome to Studbud</h2>
+    </div>
+    <p>Studbud is a study web app made for students containing 3 key elements of 6 different applications. Time management Applications, which includes Stopwatch and Pomodoro Timer, Task management applications, which are To do List and Kanban Board, and lastly Content Tools, such as Music Player and English Dictionary.</p>
+    <div>
+      <h2>Application List</h2>
+      <a href="stopwatch.html" class="presser">Stopwatch</a>
+      <a href="pomodoro.html" class="presser">Pomodoro</a>
+      <a href="todo.html" class="presser">To do list </a>
+      <a href="kanban.html" class="presser">Kanban</a>
+      <a href="music.html" class="presser">Music Player</a>
+      <a href="dictionary.html" class="presser">Dictionary</a>
+    </div>
+    </div>
+    <div class="animation-area">
+      <ul class="box-area">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <script src="/dashboard/script.js"></script>
+    <!--vanilla javascript tilt library-->
+    <script type="text/javascript" src="/dashboard/vanilla-tilt.js"></script>
+</body>
 
-    <label for="estimatedTime">Estimated completion time (in mins):</label>
-    <input type="number" name="estimatedTime" id="estimatedTimeInput">
-    <!-- Priority -->
-    <br>
-
-    <label for="priority">Task Priority:</label>
-    <select name="prority" id="priorityInput">
-      <option value="">Select one</option>
-      <option value="Low">Low</option>
-      <option value="Medium">Medium</option>
-      <option value="High">High</option>
-    </select>
-
-    <br>
-
-      <button type="submit">Submit</button>
-    </form>
-    <ul id="tasklist">
-    </ul>
-    <script src="script.js"></script>
-    <!-- Swap the scripts to see the working solution -->
-    <!-- <script src="solution.js"></script> -->
-  </body>
 </html>

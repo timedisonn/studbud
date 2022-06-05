@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Stopwatch">
+  <meta name="keywords" content="Studbud, timer, stopwatch">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>stopwatch</title>
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <!--Adobe Fonts-->
+  <link rel="stylesheet" href="https://use.typekit.net/std2ild.css">
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <!--Stylesheet-->
+  <link href="/stopwatch/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="topnav" id="myTopnav">
+    <a class="brand" href="#"><img src="/images/logo.png" alt="logo"></a>
+    <a href="index.html">Dashboard</a>
+    <a href="#" class="active">Stopwatch</a>
+    <a href="pomodoro.html">Pomodoro</a>
+    <a href="todo.html">Todo</a>
+    <a href="kanban.html">Kanban</a>
+    <a href="music.html">Music Player</a>
+    <a href="dictionary.html">Dictionary</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <div id="stopwatch">
+    00:00:00
+  </div>
+
+  <ul id="buttons">
+    <li><button onclick="startTimer()">Start</button></li>
+    <li><button onclick="stopTimer()">Stop</button></li>
+
+    <li><button onclick="resetTimer()">Reset</button></li>
+  </ul>
+
+  <script src="/stopwatch/script.js"></script>
+</body>
+
+</html>

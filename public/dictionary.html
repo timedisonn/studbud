@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Dictionary">
+  <meta name="keywords" content="Dictionary, Dictionary Lookup, API">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dictionary</title>
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+  <!--Adobe Fonts-->
+  <link rel="stylesheet" href="https://use.typekit.net/std2ild.css">
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="/dictionary/style.css" />
+</head>
+
+<body>
+  <!--navbar-->
+    <div class="topnav" id="myTopnav">
+    <a class="brand" href="#"><img src="/images/logo.png" alt="logo"></a>
+    <a href="index.html">Dashboard</a>
+    <a href="stopwatch.html">Stopwatch</a>
+    <a href="pomodoro.html">Pomodoro</a>
+    <a href="todo.html">Todo</a>
+    <a href="kanban.html">Kanban</a>
+    <a href="music.html">Music Player</a>
+    <a href="#" class="active">Dictionary</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <!--title and search bar-->
+  <div class="container">
+    <h1 class="h1">English Dictionary</h1>
+    <div class="input">
+      <input onkeypress="handle(event)" type="text" class="search-field"
+        placeholder="Type a word and press enter to search⚲" />
+    </div>
+    <!--This is the div that will display the results that we fetch from the dictionary api-->
+    <div class="result">
+      <h1 class="word"></h1>
+      <p class="phonetics"></p>
+      <p class="wordmeaning"></p>
+      <p class="word-definition"></p>
+      <p class="wordmeaning"></p>
+      <div class="synonyms"></div>
+    </div>
+  </div>
+  <script src="/dictionary/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Music Player">
+  <meta name="keywords" content="Studbud, Music, mp3">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Player</title>
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+  <!--Adobe Fonts-->
+  <link rel="stylesheet" href="https://use.typekit.net/std2ild.css">
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="/musicplayer/style.css" />
+</head>
+
+<body>
+  <div class="topnav" id="myTopnav">
+    <a class="brand" href="#"><img src="images/logo.png" alt="logo"></a>
+    <a href="index.html">Dashboard</a>
+    <a href="stopwatch.html">Stopwatch</a>
+    <a href="pomodoro.html">Pomodoro</a>
+    <a href="todo.html">Todo</a>
+    <a href="kanban.html">Kanban</a>
+    <a href="#" class="active">Music Player</a>
+    <a href="dictionary.html">Dictionary</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <audio id="myAudio">
+    <source src="/musicplayer/photoalbum.mp3" type="audio/mpeg">
+  </audio>
+  <div class="playerContent">
+    <img src="/images/album.png" alt="plants" class="albumImg">
+    <h2>Photo Album</h2>
+    <h3>By: Benjamin Tissot - Bensound.com</h3>
+    <button onclick="playAudio()" type="button">Play Music</button>
+    <button onclick="pauseAudio()" type="button">Pause Music</button>
+    <button onclick="reloadAudio()" type="button">Replay Music</button>
+    <button onclick="resetAudio()" type="button">Reset Player</button>
+  </div>
+  <script src="/musicplayer/script.js"></script>
+</body>
+
+</html>
