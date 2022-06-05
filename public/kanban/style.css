@@ -1,0 +1,241 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #FFFFFF;
+  font-family: montserrat, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #34403A;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: #34403A;
+}
+
+.topnav a.active {
+  background-color: #34403A;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.topnav .brand { 
+    max-height: 40px;
+    max-width: 12.5%; 
+    overflow: visible;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.topnav .brand img { 
+    height: auto;
+    max-width: 90%;
+    vertical-align: middle;
+}
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 13px;
+}
+/*navbar responsive design */
+@media screen and (max-width: 900px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav .brand {
+    max-width: 20%
+  }
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .brand {
+    max-width: 30%
+  }
+}
+body {
+  font-family: montserrat, sans-serif;
+  font-style: normal;
+  min-height: 100vh;
+  background: linear-gradient(
+        135deg,
+        #61988E,
+        #a0b2a6
+    );
+}
+#center {
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-container {
+  width: 800px;
+  height: 60vh;
+  display: flex;
+  
+}
+
+.status {
+  width: 25%;
+  background-color: #f3f3f3;
+  position: relative;
+  padding: 60px 1rem 0.5rem;
+}
+
+.status:nth-child(even) {
+  background-color: lightgray;
+}
+
+.status h1 {
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #008037;
+  color: white;
+  margin: 0;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size:20px;
+}
+
+#add_btn {
+  padding: 0.5rem 1rem;
+  background-color: lightgray;
+  outline: none;
+  border: none;
+  width: 100%;
+  font-size: 15px;
+  margin: 0.5rem 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#add_btn:hover {
+  background-color: lightgray;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: white;
+  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
+    rgba(15, 15, 15, 0.1) 0px 2px 4px;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 15px;
+  margin: 0.5rem 0;
+}
+
+.todo .close {
+  position: absolute;
+  right: 1rem;
+  top: 0rem;
+  font-size: 15px;
+  color: lightgray;
+  cursor: pointer;
+}
+
+.todo .close:hover {
+  color: black;
+}
+
+/* modal */
+
+.close-modal {
+  background: none;
+  border: none;
+  font-size: 15px;
+}
+
+.modal {
+  width: 450px;
+  position: fixed;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: top 0.3s ease-in-out;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  z-index: 2;
+  background-color: white;
+}
+
+.modal.active {
+  top: 15%;
+}
+
+.modal .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.modal .body {
+  padding: 0.75rem;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#overlay.active {
+  display: block;
+}
+
+#todo_input,
+#todo_submit {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  margin: 0.25rem;
+}
+
+#todo_submit {
+  background-color: #008037;
+  color: #f3f3f3;
+  font-size: 15px;
+  border: none;
+}
